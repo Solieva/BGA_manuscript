@@ -2,7 +2,7 @@ The order in which to navigate this directory:
 
 owlsnest_scripts
 	- contains the scripts that were used to calculate the SASA values from the MD simulations 
-	- the output of these scripts are this folder on an external drive because they are too large in size to upload: Passport_for_Mac/files_from_owlsnest_May16_2022/p16925/curating_dataset/SASA_calculations_May15_2022/SASA_data_files
+	- the output of these scripts are stored in this folder on an external drive because they are too large in size to upload: Passport_for_Mac/files_from_owlsnest_May16_2022/p16925/curating_dataset/SASA_calculations_May15_2022/SASA_data_files
 
 1_calculate_total_SASA.ipynb
 	-  The output files from the owlsnest_scripts are loaded, the average SASA per atom per trajectory is calculated, then the sum is computed for a final, total SASA value per molarity and temperature system. 
