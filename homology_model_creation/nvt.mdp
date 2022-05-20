@@ -1,0 +1,58 @@
+cript from Dylan
+title                    = NVT Equil MLH1-PMS1
+define                   =
+
+; MD Parameters
+integrator               = sd
+dt                       = 0.002  ; 2 fs steps
+nsteps                   = 100000  ; 200 ps total
+
+; Output control
+nstxout                  = 5000    ; every 1 ps
+nstvout                  = 5000
+nstlog                   = 5000
+nstxtcout                = 5000   ; every 1 ps
+nstenergy                = 5000
+nstcomm                  = 100
+
+; Energy Grps
+xtc_grps                 = non-Water
+energygrps               = Water non-Water
+
+; Neighbor Searching
+nstlist                  = 10
+cutoff-scheme            = Verlet
+ns_type                  = grid
+pbc                      = xyz
+
+; Electrostatics
+coulombtype              = PME
+rvdw                     = 1.0
+rlist                    = 1.0
+rcoulomb                 = 1.0
+fourierspacing           = 0.12
+pme_order                = 4
+ewald_rtol               = 1e-5
+fourierspacing           =
+pme_order                =
+
+; Temp
+tcoupl                   = Berendsen
+tc-grps                  = Water non-Water
+tau_t                    = 1.0  1.0
+ref_t                    = 300  300
+
+; Pressure
+pcoupl                   = no
+
+; Velocities
+gen_vel                  = yes
+gen_temp                 = 300
+gen_seed                 = -1
+
+; Constraints
+constraints              = hbonds
+constraint-algorithm      = lincs
+lincs_iter               = 1
+lincs_order              = 4
+
